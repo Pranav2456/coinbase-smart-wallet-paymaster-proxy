@@ -3,6 +3,7 @@ import { useCapabilities } from "wagmi/experimental";
 import { useMemo } from "react";
 import { myNFTABI, myNFTAddress } from "@/ABIs/myNFT";
 import { TransactButton } from "./TransactButton";
+import 'dotenv/config';
 
 export function TransactWithPaymaster() {
   const account = useAccount();
@@ -18,9 +19,7 @@ export function TransactWithPaymaster() {
     ) {
       return {
         paymasterService: {
-          url:
-            process.env.PAYMASTER_PROXY_SERVER_URL ||
-            `${document.location.origin}/api/paymaster`,
+          url: "https://${process.env.deployed_url}/api/paymaster",
         },
       };
     }

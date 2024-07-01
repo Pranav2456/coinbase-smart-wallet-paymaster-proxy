@@ -2,6 +2,7 @@ import { createClient, createPublicClient, http } from "viem";
 import { baseSepolia } from "viem/chains";
 import { ENTRYPOINT_ADDRESS_V06 } from "permissionless";
 import { paymasterActionsEip7677 } from "permissionless/experimental";
+import "dotenv/config";
 
 export const client = createPublicClient({
   chain: baseSepolia,
