@@ -19,7 +19,7 @@ export function TransactWithPaymaster() {
     ) {
       return {
         paymasterService: {
-          url: process.env.PAYMASTER_SERVICE_URL!,
+          url: "https://https://coinbase-smart-wallet-paymaster-proxy.vercel.app/api/paymaster",
         },
       };
     }
